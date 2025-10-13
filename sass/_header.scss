@@ -1,0 +1,91 @@
+@use 'variables' as v;
+
+header.header{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 30px;
+    margin-bottom: 90px;
+
+    .logo{
+        img{
+            width: 200px;
+        }
+    }
+    
+    .navprincipal ul{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        display: flex;
+        gap: 50px;
+
+        a{
+          text-decoration: none;
+          color: v.$dark-blue;
+          font-weight: 400;
+        }
+
+        a:hover{
+            color: v.$cyan;
+        }
+
+        select{
+            border: none;
+            background-color: v.$grey-light;
+            padding-right: 10px;
+            color: v.$dark-blue;
+        } 
+
+        select:hover{
+            color: v.$cyan;
+        }
+    }
+
+    .icon-nav{
+        display: flex;
+        align-items: center;
+        list-style: none;
+        gap: 32px;
+        img{
+            width: 25px;
+            &:hover{
+                width: 50px;
+                transition: 1s;
+            }
+        }
+
+    .login ul{
+        padding: 0;
+        margin: 0;
+        margin-left: 50px;
+        list-style: none;
+        display: flex;
+        align-items: center;
+        gap: 32px;
+
+        a{
+            color: v.$dark-blue;
+            &:hover{
+                color: white;
+            }
+        }
+        .btn{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: inline-block;
+            padding: 12px 30px;
+            color: white;
+            background-color: v.$dark-blue;
+            text-decoration: none;
+            border-radius: 32px;
+            &:hover{
+                background-color: white;
+                color: v.$dark-blue;
+                transition: 2s;
+            }
+        }
+    }
+    } 
+}       

@@ -1,0 +1,172 @@
+@use '_variables' as v;
+
+.hero{
+    display: grid;
+    grid-template-columns:65% 1fr;
+
+    &__content{
+        max-width: 70%;
+        margin-left: 46px;
+        margin-bottom: 120px;
+        
+       
+       
+        .hero-title{
+            color: v.$dark-blue;
+            font-size: 53px;
+            line-height: 70px;
+            margin-bottom: 30px;
+        }
+        .hero-description{
+            color: v.$grey;
+            font-weight: 400;
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+        aside{
+            display: flex;
+        }
+
+        .hero-button ul{
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 40px;
+            margin-bottom: 80px;
+            a{
+                color: v.$dark-blue;
+                text-decoration: none;
+                padding: 20px 0;
+                &:hover{
+                    color: v.$cyan;
+                }
+            }
+
+            .btn{
+                margin: 0;
+                padding: 0;
+                list-style: none;
+                display: inline-block;
+                padding: 12px 30px;
+                color: white;
+                background-color: v.$dark-blue;
+                text-decoration: none;
+                border-radius: 32px;
+                &:hover{
+                    color: v.$dark-blue;
+                    background-color: v.$cyan;
+                    transition: 2s;
+                }
+            }
+        
+            .hero-video{
+                background-image: url(/img/icon-play.svg);
+                background-repeat: no-repeat;
+                background-position-x: -30px;
+                background-position-y: -10px;
+                background-size: 120px;
+                padding-left: 70px;
+            }
+        }
+        .hero__informations{
+            display: flex;
+            justify-content: space-around;
+            background-color: white;
+            border-radius: 10px;
+            width: 80%;
+
+            .information{
+                margin: 30px 10px;
+                width: 120px;
+                &-icon img{
+                    width: 50px;
+                    margin-bottom: 20px;
+                    margin-left: 40px;
+                }
+
+                &-title{
+                    color: v.$dark-blue;
+                    font-weight: 500;
+                    font-size: 32px;
+                    margin-bottom: 10px;
+                    margin-left: 15px;
+                    text-align: center;
+                }
+                &-description{
+                    color: v.$grey;
+                    font-size: 16px;
+                    width: 140px;
+                    text-align: center;
+                }
+            }
+        }
+
+        .hero__img{
+            img{
+                width: 700px;
+                position: absolute;
+                top: 10%;
+                right: 21%;
+                z-index: 1;
+                
+            }
+        }
+    }
+
+    &__testimony{
+        .hero-testimony{
+            position: relative;
+        }
+
+        .img-symbol{
+            width: 400px;
+            opacity:0.1;
+            position: absolute;
+            top: 10%;
+            right: 20%;
+        }
+
+        .testimony-1{
+            position: absolute;
+            z-index: 2;
+            width: 300px;
+            background-color: #FFFFFF80;
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 25px 16px;
+            top: 40%;
+            right: 12%;
+        }
+        
+        .testimony-2{
+            position: absolute;
+            z-index: 2;
+            width: 290px;
+            background-color: #FFFFFF80;
+            backdrop-filter: blur(8px);
+            border-radius: 16px;
+            padding: 25px 16px;
+            bottom: 12%;
+            right: 18%;
+        }
+
+        .testimony-description{
+            color:v.$black;
+            font-weight: 400;
+            font-size: 15px;
+            span{
+            display: block;
+            color: v.$dark-blue;
+            font-size: 60px;
+            padding-top: 10px;
+            line-height: 0;
+            }
+            
+        }
+        .testimony-title{
+            color: v.$dark-blue;
+            font-size: 15px;
+        }
+        
+    }
+}

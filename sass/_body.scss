@@ -1,0 +1,14 @@
+@use '_variables' as v;
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background:linear-gradient(to right,v.$grey-light 66%,v.$cyan 34%);
+    background-size: 90% 75%;
+    background-repeat: no-repeat;
+}
+
+   
