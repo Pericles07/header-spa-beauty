@@ -1,4 +1,5 @@
 @use '_variables' as v;
+@use 'mixins' as *;
 *{
     margin: 0;
     padding: 0;
@@ -6,9 +7,17 @@
 
 body{
     font-family: "Poppins", sans-serif;
-    background:linear-gradient(to right,v.$grey-light 66%,v.$cyan 34%);
-    background-size: 90% 75%;
+    background:linear-gradient(to right,v.$grey-light 65%,v.$cyan 35%);
+    background-size: 95% 75%;
     background-repeat: no-repeat;
+    @include breakpoint(tablethorizontal){
+        background:linear-gradient(to right,v.$grey-light 55%,v.$cyan 45%);
+        background-size: 100% 80%;
+    }
+    @include breakpoint(tablet){
+        background:linear-gradient(to right,v.$grey-light 65%,v.$cyan 35%);
+        background-size: 100% 80%;
+    }
 }
 
    

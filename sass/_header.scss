@@ -1,4 +1,6 @@
 @use 'variables' as v;
+@use 'mixins' as *;
+
 
 header.header{
     display: flex;
@@ -6,6 +8,14 @@ header.header{
     align-items: center;
     padding-top: 30px;
     margin-bottom: 90px;
+    @include breakpoint(tablet){
+        display: block;
+        margin: 30px;
+    }
+    @include breakpoint(mobile){
+        margin: 5px;
+        padding: 0;
+    }
 
     .logo{
         img{
@@ -19,17 +29,23 @@ header.header{
         list-style: none;
         display: flex;
         gap: 50px;
+        @include breakpoint(tablet){
+        justify-content: center;
+        margin-bottom: 10px;
+        }
+        @include breakpoint(mobile){
+        gap: 15px;
+        }
 
         a{
           text-decoration: none;
           color: v.$dark-blue;
           font-weight: 400;
-        }
-
+        }  
         a:hover{
             color: v.$cyan;
         }
-
+    
         select{
             border: none;
             background-color: v.$grey-light;
@@ -47,6 +63,14 @@ header.header{
         align-items: center;
         list-style: none;
         gap: 32px;
+        @include breakpoint(tablet){
+        justify-content: end;
+        gap: 25px;
+         @include breakpoint(mobile){
+        gap: 12px;
+        justify-content: center;
+    }
+    }
         img{
             width: 25px;
             &:hover{

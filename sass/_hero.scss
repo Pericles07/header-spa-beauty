@@ -1,13 +1,23 @@
 @use '_variables' as v;
-
+@use 'mixins' as *;
+ 
 .hero{
     display: grid;
     grid-template-columns:65% 1fr;
+    @include breakpoint(mobile){
+        display: block;
+        }
 
     &__content{
         max-width: 70%;
         margin-left: 46px;
         margin-bottom: 120px;
+        @include breakpoint(mobile){
+            max-width: 100%;
+            margin-top: 50px;
+            margin-right: 20px;
+            margin-bottom: 50px;
+            }
         
        
        
@@ -16,12 +26,16 @@
             font-size: 53px;
             line-height: 70px;
             margin-bottom: 30px;
+            @include breakpoint(mobile){
+           font-size: 50px;
+            }
         }
         .hero-description{
             color: v.$grey;
             font-weight: 400;
             font-size: 20px;
             margin-bottom: 30px;
+    
         }
         aside{
             display: flex;
@@ -33,6 +47,14 @@
             align-items: center;
             gap: 40px;
             margin-bottom: 80px;
+            @include breakpoint(mobile){
+            display: block;
+            }
+            li{
+                @include breakpoint(mobile){
+                margin-bottom: 30px;
+            }
+          }
             a{
                 color: v.$dark-blue;
                 text-decoration: none;
@@ -74,14 +96,25 @@
             background-color: white;
             border-radius: 10px;
             width: 80%;
+            @include breakpoint(tablet){
+                width: 100%;
+            }
 
             .information{
                 margin: 30px 10px;
                 width: 120px;
+                @include breakpoint(tablet){
+                     width: 80px;
+                    }
+                
                 &-icon img{
                     width: 50px;
                     margin-bottom: 20px;
                     margin-left: 40px;
+                    @include breakpoint(mobile){
+                        margin-left: 0;
+                        margin-bottom: 10px;
+                    }
                 }
 
                 &-title{
@@ -91,12 +124,26 @@
                     margin-bottom: 10px;
                     margin-left: 15px;
                     text-align: center;
+                    @include breakpoint(tablet){
+                     margin-left: 40px;   
+                     font-size: 24px;
+                    }
+                    @include breakpoint(mobile){
+                    margin-left: 0;
+                    text-align: start;
+                }
                 }
                 &-description{
                     color: v.$grey;
                     font-size: 16px;
                     width: 140px;
                     text-align: center;
+                    @include breakpoint(tablet){  
+                     font-size: 10px;
+                    }
+                    @include breakpoint(mobile){
+                    width: 0;
+                }
                 }
             }
         }
@@ -108,15 +155,30 @@
                 top: 10%;
                 right: 21%;
                 z-index: 1;
-                
+                @include breakpoint(desktop){
+                width: 600px;
+                }
+                @include breakpoint(tablethorizontal){
+                width: 500px;
+                right: 18%;
+                }
+                @include breakpoint (tablet){
+                    visibility: hidden;
+                }
             }
         }
+            
     }
 
     &__testimony{
+        @include breakpoint(mobile){
+            justify-items: center;
+            padding-left: 70px;
+        }
         .hero-testimony{
             position: relative;
         }
+        
 
         .img-symbol{
             width: 400px;
@@ -124,6 +186,20 @@
             position: absolute;
             top: 10%;
             right: 20%;
+            @include breakpoint(tablethorizontal){
+                right: 10%;
+            }
+            @include breakpoint(tablet){
+                width: 300px;
+                top: 20%;
+                right: 30%;
+            }
+            @include breakpoint(mobile){
+                width: 250px;
+                top: 25%;
+                right: 30%;
+            }
+           
         }
 
         .testimony-1{
@@ -136,6 +212,15 @@
             padding: 25px 16px;
             top: 40%;
             right: 12%;
+            @include breakpoint(tablet){
+                right: 7%;
+            }
+            @include breakpoint(mobile){
+            position: relative;
+            justify-items: center;
+            width: 300px;
+            margin-bottom: 20px
+            }
         }
         
         .testimony-2{
@@ -148,6 +233,18 @@
             padding: 25px 16px;
             bottom: 12%;
             right: 18%;
+            @include breakpoint(tablethorizontal){
+                bottom: 5%;
+            }
+             @include breakpoint(tablet){
+                right: 7%;
+            }
+            @include breakpoint(mobile){
+            position: relative;
+            justify-items: center;
+            width: 300px;
+            margin-bottom: 20px;
+            }
         }
 
         .testimony-description{
